@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "product_id": "restaurant",
+  "product_name": "RestaurantTasksAI",
+  "official_domain": "restauranttasksai.com",
+  "official_github_repo": "https://github.com/laudoluxDev/restauranttasksai-mcp",
+  "official_package": "@tasksai/install",
+  "installer": {
+    "preferred": "npx",
+    "npx": {
+      "command": "npx",
+      "args": [
+        "@tasksai/install",
+        "restaurant",
+        "--source",
+        "https://github.com/laudoluxDev/restauranttasksai-mcp"
+      ],
+      "requires": [
+        "node",
+        "npm",
+        "npx"
+      ]
+    }
+  },
+  "supported_clients": [
+    "claude_desktop",
+    "cursor",
+    "windsurf",
+    "codex"
+  ],
+  "auth": {
+    "method": "browser_device_flow",
+    "connect_url": "https://restauranttasksai.com/connect",
+    "fallback": "license_key"
+  },
+  "security": {
+    "require_domain_verification": true,
+    "require_repo_verification": true,
+    "disallow_arbitrary_manifest_commands": true,
+    "native_installer_user_approval_required": true
+  },
+  "health_check": {
+    "command": "npx",
+    "args": [
+      "@tasksai/install",
+      "restaurant",
+      "doctor"
+    ]
+  },
+  "uninstall": {
+    "command": "npx",
+    "args": [
+      "@tasksai/install",
+      "restaurant",
+      "uninstall"
+    ]
+  },
+  "support": {
+    "url": "https://restauranttasksai.com/support",
+    "email": "support@restauranttasksai.com"
+  }
+}
